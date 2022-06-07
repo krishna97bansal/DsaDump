@@ -1,2 +1,0 @@
-# DsaDump
-Prominent DSA questions.
