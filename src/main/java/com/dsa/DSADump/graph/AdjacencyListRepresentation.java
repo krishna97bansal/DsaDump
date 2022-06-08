@@ -2,13 +2,13 @@ package com.dsa.DSADump.graph;
 
 import java.util.LinkedList;
 import java.util.List;
-
+// for example: graph is like this--
+//  1--2--5
+//     |  |
+//     3--4
+// In undirected graph we have mobility to and fro, so that's why adding 2 entries in list for each edge.
+// In directed graph there would be only one entry.
 public class AdjacencyListRepresentation {
-    // for example: graph is like this--
-    //  1--2--5
-    //     |  |
-    //     3--4
-
 
     public List<List<Integer>> getAdjacencyList()
     {
