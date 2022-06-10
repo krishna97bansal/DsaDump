@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 
 @Service
-public class UnidirectedCycleDetectionViaBFS {
+public class UndirectedCycleDetectionViaBFS {
     public boolean driver() {
         int vertex = 11;
         List<List<Integer>> adjacencyList = new LinkedList<>();
