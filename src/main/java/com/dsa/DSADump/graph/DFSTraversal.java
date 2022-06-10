@@ -38,7 +38,7 @@ public class DFSTraversal {
         adjacencyList.get(7).add(6);
         adjacencyList.get(7).add(2);
 
-        return getDFSTraversal(7,adjacencyList);
+        return getDFSTraversal(vertex,adjacencyList);
     }
 
     private List<Integer> getDFSTraversal(int vertex, List<List<Integer>> adjacencyList) {

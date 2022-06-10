@@ -41,7 +41,7 @@ public class BFSTraversal {
         adjacencyList.get(4).add(6);
         adjacencyList.get(6).add(4);
 
-        return getBFSTraversal(7,adjacencyList);
+        return getBFSTraversal(vertex,adjacencyList);
     }
 
     public List<Integer> getBFSTraversal(int vertex,List<List<Integer>> adjList){
