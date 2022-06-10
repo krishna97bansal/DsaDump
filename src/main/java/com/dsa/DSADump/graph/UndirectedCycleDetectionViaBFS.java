@@ -8,6 +8,11 @@ import java.util.Queue;
 
 @Service
 public class UndirectedCycleDetectionViaBFS {
+    // FOR EXAMPLE:---
+    // 1--2    3--5--6--7
+    //    |       |     |
+    //    4       10--9--8--11
+
     public boolean driver() {
         int vertex = 11;
         List<List<Integer>> adjacencyList = new LinkedList<>();
