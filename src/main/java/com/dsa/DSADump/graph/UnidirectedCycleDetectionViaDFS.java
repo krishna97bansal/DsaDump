@@ -11,8 +11,6 @@ public class UnidirectedCycleDetectionViaDFS {
     // 1--2    3--5--6--7
     //    |       |     |
     //    4       10--9--8--11
-    // At every vertex we are maintaining the pair of node and it's parent and via bfs we are checking of neighbours via others just omitting
-    // their parent, because parent to child and child to parent edge is not a loop.
     public boolean driver() {
         int vertex = 11;
         List<List<Integer>> adjacencyList = new LinkedList<>();
