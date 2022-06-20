@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 
 @Service
-public class BFSTraversal {
+public class TraversalViaBFS {
     // FOR EXAMPLE:---
     // 1--2--3      4--6
     //    |  |

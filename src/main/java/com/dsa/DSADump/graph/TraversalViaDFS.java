@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Service
-public class DFSTraversal {
+public class TraversalViaDFS {
     // FOR EXAMPLE:---
     // 1--2--4      3--5
     //    |  |
