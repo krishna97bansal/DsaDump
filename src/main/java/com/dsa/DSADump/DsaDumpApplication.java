@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DsaDumpApplication implements CommandLineRunner {
 
 	@Autowired
-	DirectedCycleDetectionViaBFS dfsTraversal;
+	ShortestPathUnidirectedUnitWeight dfsTraversal;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
