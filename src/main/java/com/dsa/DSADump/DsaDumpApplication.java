@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DsaDumpApplication implements CommandLineRunner {
 
 	@Autowired
-	TopologicalSortViaBFS dfsTraversal;
+	DirectedCycleDetectionViaBFS dfsTraversal;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
@@ -19,6 +19,6 @@ public class DsaDumpApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 //		dfsTraversal.driver().forEach(i->System.out.println(i));
-		dfsTraversal.driver();
+		System.out.println(dfsTraversal.driver());
 	}
 }
