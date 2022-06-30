@@ -5,13 +5,12 @@ import org.springframework.stereotype.Service;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+/*
+Points to Remember:
 
+ */
 @Service
 public class TraversalViaBFS {
-    // FOR EXAMPLE:---
-    // 1--2--3      4--6
-    //    |  |
-    //    7--5
     public List<Integer> driver()
     {
         int vertex=7;

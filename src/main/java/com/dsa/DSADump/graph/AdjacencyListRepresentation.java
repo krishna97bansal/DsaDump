@@ -6,8 +6,11 @@ import java.util.LinkedList;
 import java.util.List;
 /*
 Points to Remember:
-The representation of graph can be done using the List<List<Integer>> where index is the vertex,
-and list at that index is the adjacent neighbours from that index.
+1. The representation of graph can be done using the List<List<Integer>> where index is the vertex,
+   and list at that index is the adjacent neighbours from that index.
+2. In case of undirected graph, the relation between vertexes will be bilateral or to and fro.
+3. In case of directed graph, the relation between vertexes will be as per direction, if there is
+   no further way just don't mention it in adjacency list.
  */
 @Service
 public class AdjacencyListRepresentation {
