@@ -4,15 +4,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
-// for example: graph is like this--
-//  1--2--5
-//     |  |
-//     3--4
-// In undirected graph we have mobility to and fro, so that's why adding 2 entries in list for each edge.
-// In directed graph there would be only one entry.
+/*
+Points to Remember:
+The representation of graph can be done using the List<List<Integer>> where index is the vertex,
+and list at that index is the adjacent neighbours from that index.
+ */
 @Service
 public class AdjacencyListRepresentation {
-
     public List<List<Integer>> getAdjacencyList()
     {
         int vertex=5;
@@ -38,5 +36,4 @@ public class AdjacencyListRepresentation {
 
         return adjacencyList;
     }
-
 }
