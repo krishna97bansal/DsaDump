@@ -7,7 +7,11 @@ import java.util.List;
 import java.util.Queue;
 /*
 Points to Remember:
-
+1. The BFS approach is based on the traversal of the all adjacent first and then their
+   neighbours, that's why we use queue to track adjacent and then their neighbours.
+2. Graph can be disconnected too so that's why outer for loop is too traverse all
+   disconnected components.
+3. Always visit those vertex only who are not visited earlier.
  */
 @Service
 public class TraversalViaBFS {
