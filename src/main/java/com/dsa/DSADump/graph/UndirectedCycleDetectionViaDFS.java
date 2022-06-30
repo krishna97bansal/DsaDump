@@ -4,13 +4,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
-
+/*
+Points to Remember:
+1. So in cycle detection using DFS approach, we just have to do recursive call with parent as arg
+   in method call.
+2. We just check whether neighbours to that node are visited by someone else already or not, except
+   the parent due to which child has come because in undirected the representation is to and fro(else clause explanation).
+ */
 @Service
-public class UnidirectedCycleDetectionViaDFS {
-    // FOR EXAMPLE:---
-    // 1--2    3--5--6--7
-    //    |       |     |
-    //    4       10--9--8--11
+public class UndirectedCycleDetectionViaDFS {
     public boolean driver() {
         int vertex = 11;
         List<List<Integer>> adjacencyList = new LinkedList<>();
