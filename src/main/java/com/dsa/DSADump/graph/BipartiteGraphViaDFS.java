@@ -4,7 +4,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
-
+/*
+Points to Remember:
+1. So the graph is bipartite if its every node is coloured in such a way among two colours
+   that no adjacent node has same colours.
+2. 1- coloured[node] logic is used to alter colour(0,1);
+3. -1 to denote that node is not visited.
+*/
 @Service
 public class BipartiteGraphViaDFS {
     public boolean driver()
