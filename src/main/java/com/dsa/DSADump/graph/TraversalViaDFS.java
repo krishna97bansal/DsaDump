@@ -4,14 +4,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
-
+/*
+Points to Remember:
+1. The DFS approach is based on the traversal of the neighbour node till its depth,
+   that's why we are here using recursion to go till depth and coming back to
+   traverse other adjacent neighbours.
+2. Graph can be disconnected too so that's why outer for loop is too traverse all
+   disconnected components.
+3. Always visit those vertex only who are not visited earlier.
+ */
 @Service
 public class TraversalViaDFS {
-    // FOR EXAMPLE:---
-    // 1--2--4      3--5
-    //    |  |
-    //    7--6
-    // Unlike BFS we have to go at the depth of each vertex, so the dfs call happen at each vertex.
     public List<Integer> driver()
     {
         int vertex=7;
