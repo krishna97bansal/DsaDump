@@ -4,7 +4,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
-
+/*
+Points to Remember:
+1. In order to determine the cycle in directed graph via DFS, we have to maintain the dfsVisited array
+   to keep track of what all I have traversed in current stack call.
+2. If some neighbour is visited then just check whether they are traversed in current stack call.
+ */
 @Service
 public class DirectedCycleDetectionViaDFS {
 
