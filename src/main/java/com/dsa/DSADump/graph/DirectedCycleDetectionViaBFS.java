@@ -5,7 +5,13 @@ import org.springframework.stereotype.Service;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-
+/*
+Points to Remember(via Khan's Algorithm):
+1. As we know khan's Algorithm is for DAG only, so we use that aspect just introduce one variable count,
+   if it's equal to vertex that it follows Khan's Algorithm otherwise it has cycle.
+2. Similar would happen for undirected graph because the relation is to and fro,
+   so we can't apply khan's algorithm to find cycle in undirected graph.
+ */
 @Service
 public class DirectedCycleDetectionViaBFS {
 
