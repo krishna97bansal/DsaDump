@@ -5,13 +5,18 @@ import org.springframework.stereotype.Service;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
-
+/*
+Points to Remember:
+1. Topological sorting is for Directed Acyclic Graph (DAG) is a linear ordering of vertices,
+   such that for every directed edge u v, vertex u comes before v in the ordering.
+2. Topological Sorting for a graph is not possible if the graph is not a DAG.
+3. The first vertex in topological sorting is always a vertex with in-degree as 0.
+4. Modified DFS is simple here,unlike DFS adding node at start just add node at last
+   after visiting all its adjacent neighbours.
+5. So we add child then parent in stack so print it in the pop manner.(parent then child)
+ */
 @Service
 public class TopologicalSortViaDFS {
-// Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v,
-// vertex u comes before v in the ordering.
-// Topological Sorting for a graph is not possible if the graph is not a DAG.
-// The first vertex in topological sorting is always a vertex with in-degree as 0 (a vertex with no incoming edges).
     public void driver()
     {
         int vertex=6;
