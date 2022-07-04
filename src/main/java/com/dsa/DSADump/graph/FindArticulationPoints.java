@@ -6,7 +6,12 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-
+/*
+Points to Remember:
+1. Articulation points are those nodes, removal of which split the graph in two or more components.
+2. Here there is a bit change in base condition (=) and root node decision.Rest is same as Bridge approach.
+3. Here we are using DFS to achieve same.
+ */
 @Service
 public class FindArticulationPoints {
     public void driver()
@@ -68,12 +73,17 @@ public class FindArticulationPoints {
                 low[node]=Math.min(low[node],low[neighbours]);
                 /*
                 The condition to find bridge edge is as follows:
-                if child's low timer is more than the parent discovered time, which signify that child is the only way to visit down tree,
+                if child's low timer is more and equal(which signify can i go beyond up in direction after removing node)
+                than the parent discovered time, which signify that child is the only way to visit down tree,
                 and the parent discovered first so there is no other way to go beyond that edge.
+                Root node will be handled separately.
                  */
                 if(low[neighbours]>=disc[node] && parent!=-1) {
                     result.add(node);
                 }
+                /*
+                This counter is to keep track for root node to decide whether it's articulation point or not.
+                 */
                 child++;
             }
             else{
@@ -85,6 +95,10 @@ public class FindArticulationPoints {
                 low[node]=Math.min(low[node],disc[neighbours]);
             }
         }
+        /*
+        To decide whether root is articulation point or not,
+        if it has multiple child with diff path then its articulation point.
+         */
         if(parent==-1 && child>1){
             result.add(node);
         }
