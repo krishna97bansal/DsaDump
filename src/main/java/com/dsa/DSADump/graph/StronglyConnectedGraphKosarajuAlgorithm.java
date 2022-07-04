@@ -5,8 +5,14 @@ import org.springframework.stereotype.Service;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
-
-
+/*
+Points to Remember:
+1. So Kosharaju's algorithm is used to find strongly connected components from given graph.
+2. It has 3 steps-->
+   Find topological sort.
+   Then transpose graph(adjacency list).
+   Then use topological sort order from step 1 to iterate as per step 2 adjacency list.
+ */
 @Service
 public class StronglyConnectedGraphKosarajuAlgorithm {
     public void driver()
@@ -50,7 +56,7 @@ public class StronglyConnectedGraphKosarajuAlgorithm {
         while(!st.isEmpty()){
             int node=st.pop();
             if(visited[node]==0){
-                System.out.print("SCC");
+                System.out.print("SCC: ");
                 revDfs(node,transposeAdj,visited);
                 System.out.println("");
             }
