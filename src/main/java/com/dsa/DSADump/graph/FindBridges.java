@@ -4,7 +4,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
-
+/*
+Points to Remember:
+1. Bridges are those edges, removal of which split the graph in two or more components.
+2. Jenny's lecture explanation is way more understandable.
+3. Here we are using DFS to achieve same.
+ */
 @Service
 public class FindBridges {
 
@@ -36,9 +41,9 @@ public class FindBridges {
 
     private void bridge(List<List<Integer>> adjacencyList, int vertex) {
         int visited[]=new int[vertex+1];
-        int disc[]=new int[vertex+1];
-        int low[]=new int[vertex+1];
-        int counter=1;
+        int disc[]=new int[vertex+1];  // The discovery array is to mark the node discovery time.
+        int low[]=new int[vertex+1];   // The low array is to mark the ancestors of the parent that node can visit.
+        int counter=1;                 // Counter to mark the time visit.
 
         List<String> result=new LinkedList<>();
         for(int i=1;i<=vertex;i++){
@@ -56,15 +61,28 @@ public class FindBridges {
         visited[node]=1;
 
         for(int neighbours: adjacencyList.get(node)){
-            if(neighbours==parent)
+            if(neighbours==parent)       // The approach is to look down not to look up at parent. So we don't want to take action on parent node.
                 continue;
             if(visited[neighbours]==0){
                 dfs(neighbours,node,adjacencyList,visited,disc,low,counter,result);
+                /*
+                Check if the subtree rooted with child has a connection to one of the ancestors of parent.
+                 */
                 low[node]=Math.min(low[node],low[neighbours]);
+                /*
+                The condition to find bridge edge is as follows:
+                if child's low timer is more than the parent discovered time, which signify that child is the only way to visit down tree,
+                and the parent discovered first so there is no other way to go beyond that edge.
+                 */
                 if(low[neighbours]>disc[node])
                     result.add(neighbours+" "+node);
             }
             else{
+                /*
+                In case the neighbours are already visited then that edge can never be the bridge,
+                so just mark the most top rooted ancestor(the one visited(disc) first will have lesser time counter so that's why taking minimum)
+                that node can visit.
+                 */
                 low[node]=Math.min(low[node],disc[neighbours]);
             }
         }
