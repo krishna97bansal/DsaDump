@@ -5,7 +5,12 @@ import org.springframework.stereotype.Service;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-
+/*
+Points to Remember:
+1.  Finding the shortest distance in undirected graph is simpler, just take distance array with max value.
+2.  Mark source distance from itself as 0.
+3.  Traverse all adjacent and +1 from source and compare it with their distance value.
+ */
 @Service
 public class ShortestPathUnidirectedUnitWeight {
 
