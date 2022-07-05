@@ -6,7 +6,14 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
-
+/*
+Points to Remember:
+1.  Finding the shortest distance in directed graph is simpler, just take distance array with max value.
+2.  Mark source distance from itself as 0.
+3.  Traverse all adjacent and +weight of the edge from source and compare it with their distance value.
+4.  We are using heap to sort the edges as minimum distance weight first, rather than finding larger distance then reducing it to
+    the shortest one.
+ */
 @Service
 public class ShortestPathUnidirectedWeightedGraph {
     public int driver()
@@ -53,10 +60,10 @@ public class ShortestPathUnidirectedWeightedGraph {
         q.add(new Node(source,0));
         while(!q.isEmpty()){
             Node node=q.poll();
-            for(Node neighbours:adjacencyList.get(node.neighbour)){
-                if(node.weight+neighbours.weight<dist[neighbours.neighbour]){
-                    dist[neighbours.neighbour]=node.weight+neighbours.weight;
-                    q.add(new Node(neighbours.neighbour,dist[neighbours.neighbour]));
+            for(Node neighbours:adjacencyList.get(node.vertex)){
+                if(node.weight+neighbours.weight<dist[neighbours.vertex]){
+                    dist[neighbours.vertex]=node.weight+neighbours.weight;
+                    q.add(new Node(neighbours.vertex,dist[neighbours.vertex]));
                 }
             }
         }
@@ -65,11 +72,11 @@ public class ShortestPathUnidirectedWeightedGraph {
 }
 
 class Node{
-    int neighbour;
+    int vertex;
     int weight;
 
-    public Node(int neighbour,int weight) {
-        this.neighbour = neighbour;
+    public Node(int vertex,int weight) {
+        this.vertex = vertex;
         this.weight=weight;
     }
 }
