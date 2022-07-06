@@ -9,6 +9,11 @@ import java.util.Queue;
 import java.util.Stack;
 /*
 Points to Remember:
+1. Approach is simple maintain temp node first push all left into the stack
+   and update temp node to left.
+2. If temp is null that means all the left node done, then It's time to pop from
+   stack print node and update temp to right node so left of those can be iterated first.
+3. If stack is empty then break from while that means all nodes are iterated.
  */
 @Service
 public class InOrderTraversalIterative {

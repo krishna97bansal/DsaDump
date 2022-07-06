@@ -5,10 +5,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Stack;
 /*
 Points to Remember:
+1. Approach is simple first take stack and push root into it.
+2. Then empty stack, print popped element and push right first then fet node
+   So when we pop again back from stack left should come first then right one.
  */
 @Service
 public class PreOrderTraversalIterative {
