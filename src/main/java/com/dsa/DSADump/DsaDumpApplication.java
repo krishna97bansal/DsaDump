@@ -1,10 +1,7 @@
 package com.dsa.DSADump;
 
 import com.dsa.DSADump.graph.*;
-import com.dsa.DSADump.tree.traversals.InorderTraversal;
-import com.dsa.DSADump.tree.traversals.LevelOrderTraversal;
-import com.dsa.DSADump.tree.traversals.PostOrderTraversal;
-import com.dsa.DSADump.tree.traversals.PreOrderTraversal;
+import com.dsa.DSADump.tree.traversals.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DsaDumpApplication implements CommandLineRunner {
 	@Autowired
-	LevelOrderTraversal primAlgorithm;
+	PreOrderTraversalIterative primAlgorithm;
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
 	}
