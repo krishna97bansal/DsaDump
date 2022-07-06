@@ -17,17 +17,17 @@ public class PreOrderTraversal {
         node.right.left=new TreeNode(6);
         node.right.right=new TreeNode(7);
 
-        inOrderTraversal(node);
+        preOrderTraversal(node);
     }
 
-    private void inOrderTraversal(TreeNode node) {
+    private void preOrderTraversal(TreeNode node) {
         if(node==null){
             return;
         }
 
         System.out.print(node.value+" ");
-        inOrderTraversal(node.left);
-        inOrderTraversal(node.right);
+        preOrderTraversal(node.left);
+        preOrderTraversal(node.right);
 
     }
 }

@@ -17,16 +17,16 @@ public class PostOrderTraversal {
         node.right.left=new TreeNode(6);
         node.right.right=new TreeNode(7);
 
-        inOrderTraversal(node);
+        postOrderTraversal(node);
     }
 
-    private void inOrderTraversal(TreeNode node) {
+    private void postOrderTraversal(TreeNode node) {
         if(node==null){
             return;
         }
 
-        inOrderTraversal(node.left);
-        inOrderTraversal(node.right);
+        postOrderTraversal(node.left);
+        postOrderTraversal(node.right);
         System.out.print(node.value+" ");
 
     }
