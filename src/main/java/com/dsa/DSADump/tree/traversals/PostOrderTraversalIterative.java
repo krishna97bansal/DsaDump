@@ -3,7 +3,9 @@ package com.dsa.DSADump.tree.traversals;
 import com.dsa.DSADump.tree.TreeNode;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 @Service
 public class PostOrderTraversalIterative {
@@ -22,6 +24,31 @@ public class PostOrderTraversalIterative {
     }
 
     private List<Integer> postOrderTraversalIterative(TreeNode node) {
-        return null;
+        List<Integer> result=new LinkedList<>();
+        TreeNode temp =node;
+        Stack<TreeNode> st=new Stack<>();
+        while(temp!=null || !st.isEmpty()){
+            if(temp!=null){
+                st.add(temp);
+                temp=temp.left;
+            }
+            else{
+                TreeNode temp2=st.peek();
+                if(temp2.right==null){
+                    TreeNode out=st.pop();
+                    result.add(out.value);
+                    while(!st.isEmpty() && st.peek().right==out){
+                        out=st.pop();
+                        result.add(out.value);
+                    }
+
+                }
+                else{
+                    temp=temp2.right;
+                }
+            }
+
+        }
+        return result;
     }
 }
