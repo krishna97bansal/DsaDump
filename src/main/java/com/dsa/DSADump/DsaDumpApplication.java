@@ -1,13 +1,6 @@
 package com.dsa.DSADump;
 
-import com.dsa.DSADump.graph.*;
-import com.dsa.DSADump.matrix.FindElementInRowColumnSortedMatrix;
-import com.dsa.DSADump.matrix.SpiralTraversal;
-import com.dsa.DSADump.matrix.TurnCell;
-import com.dsa.DSADump.tree.BalancedTree;
-import com.dsa.DSADump.tree.Diameter;
-import com.dsa.DSADump.tree.MaxDepthOrHeight;
-import com.dsa.DSADump.tree.traversals.*;
+import com.dsa.DSADump.tree.height.MaxPathSum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DsaDumpApplication implements CommandLineRunner {
 	@Autowired
-	ZigZagTraversal primAlgorithm;
+	MaxPathSum primAlgorithm;
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
 	}

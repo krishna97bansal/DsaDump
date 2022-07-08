@@ -1,9 +1,10 @@
-package com.dsa.DSADump.tree;
+package com.dsa.DSADump.tree.height;
 
+import com.dsa.DSADump.tree.TreeNode;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MaxDepthOrHeight {
+public class Diameter {
     public void driver(){
         TreeNode node=new TreeNode(1);
         node.left=new TreeNode(2);
@@ -12,16 +13,20 @@ public class MaxDepthOrHeight {
         node.left.right=new TreeNode(5);
         node.right.left=new TreeNode(6);
         node.right.right=new TreeNode(7);
-
-        System.out.println(height(node));
+        int res[]=new int[1];
+        diamt(node,res);
+       System.out.println(res[0]);
     }
 
-    private int height(TreeNode node) {
-        if(node==null)
+    private int diamt(TreeNode node, int[] result) {
+        if(node==null){
             return 0;
+        }
 
-        int lh=height(node.left);
-        int rh=height(node.right);
+        int lh=diamt(node.left,result);
+        int rh=diamt(node.right,result);
+
+        result[0]=Math.max(result[0],lh+rh);
 
         return 1+Math.max(lh,rh);
     }

@@ -1,5 +1,6 @@
-package com.dsa.DSADump.tree;
+package com.dsa.DSADump.tree.height;
 
+import com.dsa.DSADump.tree.TreeNode;
 import org.springframework.stereotype.Service;
 
 @Service
