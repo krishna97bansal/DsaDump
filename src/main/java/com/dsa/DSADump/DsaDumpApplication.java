@@ -3,6 +3,7 @@ package com.dsa.DSADump;
 import com.dsa.DSADump.tree.ChildrenSumPropertyConversion;
 import com.dsa.DSADump.tree.SymmetricTrees;
 import com.dsa.DSADump.tree.bst.CheckBST;
+import com.dsa.DSADump.tree.bst.InOrderPredecessor;
 import com.dsa.DSADump.tree.bst.SortedArrayToBST;
 import com.dsa.DSADump.tree.views.BottomView;
 import com.dsa.DSADump.tree.views.RightView;
@@ -16,7 +17,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DsaDumpApplication implements CommandLineRunner {
 	@Autowired
-	ChildrenSumPropertyConversion primAlgorithm;
+	InOrderPredecessor primAlgorithm;
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
 	}
