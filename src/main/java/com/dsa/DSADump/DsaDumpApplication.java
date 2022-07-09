@@ -2,6 +2,7 @@ package com.dsa.DSADump;
 
 import com.dsa.DSADump.tree.SymmetricTrees;
 import com.dsa.DSADump.tree.bst.CheckBST;
+import com.dsa.DSADump.tree.bst.SortedArrayToBST;
 import com.dsa.DSADump.tree.views.BottomView;
 import com.dsa.DSADump.tree.views.RightView;
 import com.dsa.DSADump.tree.views.TopView;
@@ -14,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DsaDumpApplication implements CommandLineRunner {
 	@Autowired
-	SymmetricTrees primAlgorithm;
+	SortedArrayToBST primAlgorithm;
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
 	}
