@@ -1,5 +1,6 @@
 package com.dsa.DSADump;
 
+import com.dsa.DSADump.tree.ChildrenSumPropertyConversion;
 import com.dsa.DSADump.tree.SymmetricTrees;
 import com.dsa.DSADump.tree.bst.CheckBST;
 import com.dsa.DSADump.tree.bst.SortedArrayToBST;
@@ -15,7 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DsaDumpApplication implements CommandLineRunner {
 	@Autowired
-	SortedArrayToBST primAlgorithm;
+	ChildrenSumPropertyConversion primAlgorithm;
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
 	}
