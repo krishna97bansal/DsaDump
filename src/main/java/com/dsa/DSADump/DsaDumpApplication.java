@@ -1,5 +1,7 @@
 package com.dsa.DSADump;
 
+import com.dsa.DSADump.array.KLargest;
+import com.dsa.DSADump.array.Ksmallest;
 import com.dsa.DSADump.array.MinInRotatedSortedArray;
 import com.dsa.DSADump.array.SearchInrotatedSortedArray;
 import com.dsa.DSADump.tree.ChildrenSumPropertyConversion;
@@ -19,7 +21,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DsaDumpApplication implements CommandLineRunner {
 	@Autowired
-	MinInRotatedSortedArray primAlgorithm;
+	Ksmallest primAlgorithm;
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
 	}
