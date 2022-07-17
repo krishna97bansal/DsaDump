@@ -1,6 +1,8 @@
 package com.dsa.DSADump;
 
 import com.dsa.DSADump.array.*;
+import com.dsa.DSADump.dp.LCS;
+import com.dsa.DSADump.dp.LSWR;
 import com.dsa.DSADump.tree.ChildrenSumPropertyConversion;
 import com.dsa.DSADump.tree.SymmetricTrees;
 import com.dsa.DSADump.tree.bst.CheckBST;
@@ -18,7 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DsaDumpApplication implements CommandLineRunner {
 	@Autowired
-	Sort012 primAlgorithm;
+	LCS  primAlgorithm;
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
 	}
