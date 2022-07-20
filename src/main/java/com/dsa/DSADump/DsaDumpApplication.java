@@ -20,7 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DsaDumpApplication implements CommandLineRunner {
 	@Autowired
-	LCS  primAlgorithm;
+	Permutation  primAlgorithm;
 	public static void main(String[] args) {
 		SpringApplication.run(DsaDumpApplication.class, args);
 	}
@@ -28,6 +28,7 @@ public class DsaDumpApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
     primAlgorithm.driver();
+
 
 	}
 }
